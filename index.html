@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <meta name="author" content="Alparslan Demir">
-    <title>NIGHT RACER 2026 | Alparslan Demir</title>
+    <title>NIGHT RACER | Alparslan Demir</title>
     <style>
         * {
             margin: 0;
@@ -22,6 +22,10 @@
             align-items: center;
             font-family: 'Segoe UI', 'Poppins', system-ui, sans-serif;
             padding: 12px;
+        }
+
+        html, body {
+           overscroll-behavior-y: none;
         }
 
         .game-container {
@@ -352,26 +356,26 @@
 
         <div class="controls">
             <button class="control-btn" id="leftControl">◀ LEFT</button>
-            <button class="control-btn menu-control" id="menuControl">📋 MENU</button>
+            <button class="control-btn menu-control" id="menuControl">MENU</button>
             <button class="control-btn" id="rightControl">RIGHT ▶</button>
         </div>
-        <div class="tip-line" id="tipText">← → or A/D | 2026 Alparslan Demir</div>
+        <div class="tip-line" id="tipText">← → or A/D | Alparslan Demir</div>
     </div>
 </div>
 
 <div id="menuModal" class="modal">
     <div class="modal-card">
-        <h2>🏁 NIGHT RACER</h2>
-        <div class="year-badge">2026 ALPARSLAN DEMIR</div>
+        <h2>Speed Racer</h2>
+        <div class="year-badge">ALPARSLAN DEMIR</div>
         
         <div class="modal-stats">
-            <p id="menuBestText">🏆 BEST SCORE: <span id="menuBest">0</span></p>
-            <p id="menuMaxSpeedText">🚀 MAX SPEED: <span id="menuMaxSpeed">0</span> km/h</p>
-            <p id="menuGamesText">🎯 TOTAL GAMES: <span id="totalGames">0</span></p>
+            <p id="menuBestText">BEST SCORE: <span id="menuBest">0</span></p>
+            <p id="menuMaxSpeedText">MAX SPEED: <span id="menuMaxSpeed">0</span> km/h</p>
+            <p id="menuGamesText">TOTAL GAMES: <span id="totalGames">0</span></p>
         </div>
 
         <div>
-            <div style="color:#ffcc44; margin-bottom:8px; font-size:0.9rem;" id="langTitle">🌐 LANGUAGE</div>
+            <div style="color:#ffcc44; margin-bottom:8px; font-size:0.9rem;" id="langTitle">LANGUAGE</div>
             <div class="lang-selector">
                 <button class="lang-opt" data-lang="en">ENGLISH</button>
                 <button class="lang-opt" data-lang="de">DEUTSCH</button>
@@ -380,16 +384,16 @@
         </div>
 
         <div>
-            <div style="color:#ffcc44; margin-bottom:8px; font-size:0.9rem;" id="difficultyTitle">🎮 DIFFICULTY</div>
+            <div style="color:#ffcc44; margin-bottom:8px; font-size:0.9rem;" id="difficultyTitle">DIFFICULTY</div>
             <div class="difficulty-selector">
-                <button class="difficulty-opt" data-diff="easy" id="easyBtn">🟢 EASY</button>
-                <button class="difficulty-opt active" data-diff="normal" id="normalBtn">🟡 NORMAL</button>
-                <button class="difficulty-opt" data-diff="hard" id="hardBtn">🔴 HARD</button>
+                <button class="difficulty-opt" data-diff="easy" id="easyBtn">EASY</button>
+                <button class="difficulty-opt active" data-diff="normal" id="normalBtn">NORMAL</button>
+                <button class="difficulty-opt" data-diff="hard" id="hardBtn">HARD</button>
             </div>
         </div>
 
         <div>
-            <div style="color:#ffcc44; margin-bottom:8px; font-size:0.9rem;" id="colorTitle">🎨 CAR COLOR</div>
+            <div style="color:#ffcc44; margin-bottom:8px; font-size:0.9rem;" id="colorTitle">CAR COLOR</div>
             <div class="color-options" id="colorPalette">
                 <div class="color-circle" style="background:#30d5ff;" data-color="#30d5ff"></div>
                 <div class="color-circle" style="background:#ff4444;" data-color="#ff4444"></div>
@@ -401,12 +405,12 @@
         </div>
 
         <div class="menu-buttons">
-            <button class="menu-button primary" id="restartFromMenu" data-text-restart="RESTART">🔄 RESTART</button>
-            <button class="menu-button" id="closeMenuButton" data-text-resume="RESUME GAME">🎮 RESUME GAME</button>
+            <button class="menu-button primary" id="restartFromMenu" data-text-restart="RESTART">RESTART</button>
+            <button class="menu-button" id="closeMenuButton" data-text-resume="RESUME GAME">RESUME GAME</button>
         </div>
 
         <div class="credits">
-            <strong>NIGHT RACER 2026</strong><br>
+            <strong>Speed Racer</strong><br>
             DEVELOPER: <strong>ALPARSLAN DEMIR</strong>
         </div>
     </div>
@@ -445,23 +449,23 @@
         const translations = {
             en: {
                 score: "SCORE", best: "BEST", difficulty: "DIFFICULTY", speed: "SPEED", time: "TIME", traffic: "TRAFFIC",
-                tip: "← → or A/D | 2026 Alparslan Demir", easy: "EASY", normal: "NORMAL", hard: "HARD",
-                menuBest: "🏆 BEST SCORE:", menuMaxSpeed: "🚀 MAX SPEED:", menuGames: "🎯 TOTAL GAMES:",
-                langTitle: "🌐 LANGUAGE", difficultyTitle: "🎮 DIFFICULTY", colorTitle: "🎨 CAR COLOR",
+                tip: "← → or A/D |Alparslan Demir", easy: "EASY", normal: "NORMAL", hard: "HARD",
+                menuBest: "BEST SCORE:", menuMaxSpeed: "MAX SPEED:", menuGames: "TOTAL GAMES:",
+                langTitle: "LANGUAGE", difficultyTitle: "DIFFICULTY", colorTitle: "CAR COLOR",
                 restart: "RESTART", resume: "RESUME GAME", gameOver: "GAME OVER", restartMsg: "RESTART FROM MENU"
             },
             de: {
                 score: "PUNKTE", best: "BESTE", difficulty: "SCHWIERIGKEIT", speed: "GESCHW.", time: "ZEIT", traffic: "VERKEHR",
-                tip: "← → oder A/D | 2026 Alparslan Demir", easy: "EINFACH", normal: "NORMAL", hard: "SCHWER",
-                menuBest: "🏆 BESTPUNKTZAHL:", menuMaxSpeed: "🚀 HÖCHSTGESCHW.:", menuGames: "🎯 GESAMTSPIELE:",
-                langTitle: "🌐 SPRACHE", difficultyTitle: "🎮 SCHWIERIGKEIT", colorTitle: "🎨 FARBE",
+                tip: "← → oder A/D |Alparslan Demir", easy: "EINFACH", normal: "NORMAL", hard: "SCHWER",
+                menuBest: "BESTPUNKTZAHL:", menuMaxSpeed: "HÖCHSTGESCHW.:", menuGames: "GESAMTSPIELE:",
+                langTitle: "SPRACHE", difficultyTitle: "SCHWIERIGKEIT", colorTitle: "FARBE",
                 restart: "NEUSTART", resume: "WEITERSPIELEN", gameOver: "SPIEL VORBEI", restartMsg: "NEUSTART IM MENÜ"
             },
             tr: {
                 score: "SKOR", best: "REKOR", difficulty: "ZORLUK", speed: "HIZ", time: "SÜRE", traffic: "TRAFİK",
-                tip: "← → veya A/D | 2026 Alparslan Demir", easy: "KOLAY", normal: "NORMAL", hard: "ZOR",
-                menuBest: "🏆 EN İYİ SKOR:", menuMaxSpeed: "🚀 MAKSİMUM HIZ:", menuGames: "🎯 TOPLAM OYUN:",
-                langTitle: "🌐 DİL", difficultyTitle: "🎮 ZORLUK", colorTitle: "🎨 ARABA RENGİ",
+                tip: "← → veya A/D |Alparslan Demir", easy: "KOLAY", normal: "NORMAL", hard: "ZOR",
+                menuBest: "EN İYİ SKOR:", menuMaxSpeed: "MAKSİMUM HIZ:", menuGames: "TOPLAM OYUN:",
+                langTitle: "DİL", difficultyTitle: "ZORLUK", colorTitle: "ARABA RENGİ",
                 restart: "YENİDEN BAŞLAT", resume: "OYUNA DÖN", gameOver: "OYUN BİTTİ", restartMsg: "MENÜ'DEN YENİDEN BAŞLAT"
             }
         };
@@ -481,13 +485,13 @@
             document.getElementById('langTitle').innerText = t.langTitle;
             document.getElementById('difficultyTitle').innerText = t.difficultyTitle;
             document.getElementById('colorTitle').innerText = t.colorTitle;
-            document.getElementById('restartFromMenu').innerText = `🔄 ${t.restart}`;
-            document.getElementById('closeMenuButton').innerText = `🎮 ${t.resume}`;
+            document.getElementById('restartFromMenu').innerText = `${t.restart}`;
+            document.getElementById('closeMenuButton').innerText = `${t.resume}`;
             document.querySelectorAll('.difficulty-opt').forEach(btn => {
                 let diff = btn.getAttribute('data-diff');
-                if(diff === 'easy') btn.innerText = `🟢 ${t.easy}`;
-                else if(diff === 'hard') btn.innerText = `🔴 ${t.hard}`;
-                else btn.innerText = `🟡 ${t.normal}`;
+                if(diff === 'easy') btn.innerText = `${t.easy}`;
+                else if(diff === 'hard') btn.innerText = `${t.hard}`;
+                else btn.innerText = `${t.normal}`;
             });
         }
 
@@ -505,8 +509,8 @@
             document.getElementById('trafficDensity').innerText = trafficText;
         }
         
-        function loadBest() { let saved = localStorage.getItem('racer_2026_best'); if(saved && !isNaN(parseInt(saved))) bestScore = parseInt(saved); else bestScore = 0; document.getElementById('bestValue').innerText = bestScore; document.getElementById('menuBest').innerText = bestScore; }
-        function saveBest() { let intScore = Math.floor(score); if(intScore > bestScore) { bestScore = intScore; localStorage.setItem('racer_2026_best', bestScore); document.getElementById('bestValue').innerText = bestScore; document.getElementById('menuBest').innerText = bestScore; } }
+        function loadBest() { let saved = localStorage.getItem('racer_best'); if(saved && !isNaN(parseInt(saved))) bestScore = parseInt(saved); else bestScore = 0; document.getElementById('bestValue').innerText = bestScore; document.getElementById('menuBest').innerText = bestScore; }
+        function saveBest() { let intScore = Math.floor(score); if(intScore > bestScore) { bestScore = intScore; localStorage.setItem('racer_best', bestScore); document.getElementById('bestValue').innerText = bestScore; document.getElementById('menuBest').innerText = bestScore; } }
         
         function loadTotalGames() { let saved = localStorage.getItem('racer_total_games'); if(saved && !isNaN(parseInt(saved))) totalGamesPlayed = parseInt(saved); else totalGamesPlayed = 0; document.getElementById('totalGames').innerText = totalGamesPlayed; }
         function incrementTotalGames() { totalGamesPlayed++; localStorage.setItem('racer_total_games', totalGamesPlayed); document.getElementById('totalGames').innerText = totalGamesPlayed; }
